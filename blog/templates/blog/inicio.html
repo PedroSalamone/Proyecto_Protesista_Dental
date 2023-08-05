@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>-P r o D e n t a l-</h1>
+    <ul>
+        <li><a href="{% url 'blog:user_login' %}">Login</a></li>
+        <li><a href="{% url 'blog:user_register' %}">Registrarse</a></li>
+        <li><a href="{% url 'blog:lista_publicaciones' %}">Publicaciones</a></li>
+        <li><a href="{% url 'blog:user_logout' %}">Logout</a></li>
+    </ul>
+    <p>Bienvenidxs al Blog de los Protesistas Dentales! Un sitio para publicar tus trabajos e intercambiar ideas, dudas o soluciones!</p>
+    
+    
+    <h3>Login</h3>
+    <form method="post" action="{% url 'user_login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+    
+    <h3>Registrarse</h3>
+    <form method="post" action="{% url 'user_register' %}">
+        {% csrf_token %}
+        {{ registration_form.as_p }}
+        <button type="submit">Registrarse</button>
+    </form>
+    
+    <h3>ProDental - Búsquedas</h3>
+    <p>Buscar publicaciones...</p>
+    <form method="GET" action="{% url 'blog:busqueda_publicacion' %}">
+        <input type="text" name="q" placeholder="Buscar">
+        <button type="submit">Buscar</button>
+    </form>
+    
+    <footer>
+        <p>Nombre: ProDental</p>
+        <p>Email: prodental@pipomail.com</p>
+        <p>Derechos de autor © ProDental Web 2023</p>
+    </footer>
+{% endblock %}
+

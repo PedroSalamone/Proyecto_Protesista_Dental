@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2>Registrarse</h2>
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="form-group">
+      {{ field.label_tag }}
+      {{ field }}
+      {% if field.errors %}
+      <div class="alert alert-danger" role="alert">
+        {% for error in field.errors %}
+        {{ error }}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+    <button type="submit">Registrarse</button>
+  </form>
+</div>
+{% endblock %}
+

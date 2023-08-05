@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Lista de Publicaciones{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Lista de Publicaciones</h1>
+        <ul>
+            {% for publicacion in publicaciones %}
+                <li>
+                    <h2><a href="{% url 'blog:blog_post_detail' pk=publicacion.pk %}">{{ publicacion.titulo }}</a></h2>
+                    <p>Autor: {{ publicacion.autor.username }}</p>
+                    {% if publicacion.imagen %}
+                        <img src="{{ publicacion.imagen.url }}" alt="{{ publicacion.titulo }}" style="max-width: 200px; max-height: 150px;">
+                    {% endif %}
+                    <p>{{ publicacion.contenido }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

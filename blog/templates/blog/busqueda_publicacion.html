@@ -1,0 +1,19 @@
+
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>Resultados de la Búsqueda</h1>
+    <form method="GET">
+        <input type="text" name="q" value="{{ query }}">
+        <button type="submit">Buscar</button>
+    </form>
+    <ul>
+        {% for publicacion in publicaciones %}
+            <li>{{ publicacion.titulo }} - {{ publicacion.contenido }}</li>
+            
+        {% empty %}
+            <li>No se encontraron publicaciones.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

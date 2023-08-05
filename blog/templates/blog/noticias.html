@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block noticias %}
+    <!-- Aquí va el contenido específico de la vista de noticias -->
+    <h2>Noticias</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Agregar Noticia</button>
+    </form>
+
+    {% for noticia in noticias %}
+        <h3>{{ noticia.titulo }}</h3>
+        <p>{{ noticia.descripcion }}</p>
+        {% if noticia.imagen %}
+            <img src="{{ noticia.imagen.url }}" alt="{{ noticia.titulo }}">
+        {% endif %}
+        <!-- Mostrar otros detalles de la noticia, como el autor, fecha, etc. -->
+    {% endfor %}
+{% endblock %}
+

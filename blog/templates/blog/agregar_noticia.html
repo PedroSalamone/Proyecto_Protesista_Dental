@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block noticias %}
+    
+    <h2>Noticias</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required><br>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea><br>
+
+        <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*"><br>
+
+        <button type="submit">Agregar Noticia</button>
+    </form>
+{% endblock %}
