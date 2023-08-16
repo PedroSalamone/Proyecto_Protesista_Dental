@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 class LoginForm(forms.Form):
-    email = forms.EmailField(max_length=254, required=True, help_text='Ingresa tu correo electrónico')
+    # email = forms.EmailField(max_length=254, required=True, help_text='Ingresa tu correo electrónico')
     username = forms.CharField(max_length=150, required=True, help_text='Ingresa tu nombre de usuario')
     password = forms.CharField(label='Password', widget=forms.PasswordInput(), required=True)
 

@@ -12,6 +12,7 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        
     </head>
         <style>
         header {
@@ -103,6 +104,10 @@
                         </div>
                     </div>
                 
+                {% block content %}
+                
+                {% endblock content %}
+
                     <!-- Side widget-->
                 {% block side_widget %}
                 <div class="card mb-4">
@@ -116,6 +121,13 @@
                 </div>
                 
             </div>
+            <div class="row">
+            <div class="col-lg-12">
+                <!-- Contenido de la sección de noticias -->
+                {% block noticias %}
+                {% endblock noticias %}
+            </div>
+        </div>
         </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">

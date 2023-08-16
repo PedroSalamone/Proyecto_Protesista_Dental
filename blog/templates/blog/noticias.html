@@ -1,7 +1,15 @@
 {% extends 'blog/base.html' %}
 
 {% block noticias %}
-    <!-- Aquí va el contenido específico de la vista de noticias -->
+    <style>
+        /* Agrega estilos para la sección de noticias en noticias.html */
+        .noticias-container {
+            float: right;
+            width: 30%;
+            margin-left: 20px;
+        }
+        /* Otros estilos que puedas necesitar */
+    </style>
     <h2>Noticias</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -17,5 +25,7 @@
         {% endif %}
         <!-- Mostrar otros detalles de la noticia, como el autor, fecha, etc. -->
     {% endfor %}
-{% endblock %}
+{% endblock noticias %}
+
+
 
