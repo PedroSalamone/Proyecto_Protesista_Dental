@@ -36,9 +36,8 @@ A continuacion hay 5 publicaciones:
 	Corona Ceramica
 
 
-Luego de crear casi todo el proyecto y todo venia funcionando a la perfeccion, se me ocurrio agregar un inicio para que no este todo junto y sea mas presentable, 
-y a este inicio tambien se me ocurrio agregarle una seccion de noticias con su respectiva descripcion e imagenes. A partir de ese momento nunca volvio a funcionar, 
-no entiendo aun que fue lo que hice, estuve 3 dias literalmente buscando el error y no pude encontrarlo, por lo tanto no pude seguir con el desarrollo del proyecto.
-Ojala ustedes puedan encontrar ese error, errores. Desde ya pido disculpas por el trabajo incompleto, y si existe la posibilidad de una extension de entrega y alguna ayuda con este tema 
-de parte de uds. estaria muy agradecido.
+Luego de crear casi todo el proyecto y todo venia funcionando a la perfeccion, se me ocurrio agregar un inicio para que no este todo junto y sea mas presentable. 
+A este inicio tambien se me ocurrio agregarle una seccion de noticias con su respectiva descripcion e imagenes, en el cual hay cargadas dos noticias pero no puedo lograr que se vean en pantalla. Tambien quise que se vean en la parte derecha de la pantalla,
+si revisan el codigo lo van a ver, pero no me funciona y no encuentro la solucion.
+
 
